@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from .libs.thai_dishes import m_rand
 
 app = FastAPI()
 
@@ -12,4 +13,4 @@ async def hello_world():
 
 @app.get("/demo")
 async def demo_module():
-    return {"dish": "xxxx"}
+    return {"dish": m_rand()}
